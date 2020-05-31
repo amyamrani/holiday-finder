@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightgray;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.result-country {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.result-country img {
+    margin-right: 20px;
+}
+
+.result-item {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+#js-error-message {
+    color: red;
+}
+  
+.hidden {
+    display: none;
+ }
+
+ @media screen and (min-width: 480px) {
+ }
+
+ @media screen and (min-width:800px) {
+ }
