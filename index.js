@@ -5,7 +5,7 @@ const baseURL = 'https://calendarific.com/api/v2/holidays';
 
 function formatQueryParams (params) {
     const queryItems = Object.keys(params)
-        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');  
 }
 
@@ -13,16 +13,19 @@ function displayResults(responseJson) {
     const searchCountry = $('#js-search-country').val();
     const searchCountryName = $('#js-search-country option:selected').text();
     $('#results-list').append(
-        `
-        <div class="result-country">
+        `<div class="result-country">
             <img src="https://www.countryflags.io/${searchCountry}/flat/64.png" alt='country flag'>
             <div><h3>${searchCountryName}</h3></div>
-        </div>
-        `
-    )
+        </div>`
+    );
 
+    //no holidays for the user's search criteria
     if (responseJson.response.holidays.length == 0) {
-        $('#results-list').text('No results found.');
+        $('#results-list').append(
+            `<div class="no-results">
+                <p>No results found. Please try a different search.</p>
+            </div>`
+        );
     }
 
     for (let i = 0; i < responseJson.response.holidays.length; i++) {
@@ -33,7 +36,7 @@ function displayResults(responseJson) {
                 <p>Description: ${responseJson.response.holidays[i].description}
                 <p>Type: ${responseJson.response.holidays[i].type}
             </div>`
-        )
+        );
     }
     $('#js-loading-message').empty();
     $('#results').removeClass('hidden'); 
@@ -63,6 +66,7 @@ function getHolidays(searchMonth, searchDay, searchYear, searchCountry) {
     .then(responseJson => displayResults(responseJson))
     .catch(err => {
         $('#js-loading-message').empty();
+        //unexpected error occurred
         $('#js-error-message').text(`Sorry, something went wrong. Please try again.`);
     });
 }
@@ -80,11 +84,12 @@ function watchForm() {
   
 $(watchForm);
 
+//populate the years in the year dropdown menu
 function setupForm() {
     for (let i = 2020; i <= 2049; i++) {
         $('#js-search-year').append(
             `<option value=${i}>${i}</option>`
-        )
+        );
     }
 }
 

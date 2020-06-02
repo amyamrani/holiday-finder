@@ -3,8 +3,8 @@
 }
   
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: lightgray;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(247, 250, 252);
 }
   
 .container {
@@ -14,10 +14,77 @@ body {
 
 h1 {
     text-align: center;
+    color: rgb(56, 178, 172);
 }
 
 .form-group {
+    margin-top: 10px;
+}
+
+.form-header {
+    font-size: 18px;
+    color: #4A5568;
+}
+
+.js-form {
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    margin: 0 auto;
+    border: 2px solid #EDF2F7;
+}
+
+select {
+    display: block;
     margin-bottom: 10px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: #EDF2F7;
+    border: 1px solid #EDF2F7;
+    color: #4A5568;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 32px;
+    padding-left: 16px;
+    line-height: 1.25;
+    border-radius: 4px;
+}
+
+select:focus {
+    outline: 0;
+    background-color: white;
+    border-color: #a0aec0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #4A5568;
+    padding: 15px;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+button {
+    background: rgb(56, 178, 172);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.actions {
+    text-align: right;
 }
 
 .result-country {
@@ -26,6 +93,7 @@ h1 {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    color: #4A5568;
 }
 
 .result-country img {
@@ -33,21 +101,30 @@ h1 {
 }
 
 .result-item {
-    border: 1px solid black;
+    background: white;
+    border: 2px solid #EDF2F7;
     margin-bottom: 20px;
     padding: 0 20px;
+    color: #4A5568;
 }
 
 #js-error-message {
-    color: red;
+    color: #C53030;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#js-loading-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-results {
+    text-align: center;
+    color: #C53030;
+    font-weight: bold;
 }
   
 .hidden {
     display: none;
- }
-
- @media screen and (min-width: 480px) {
- }
-
- @media screen and (min-width:800px) {
  }
