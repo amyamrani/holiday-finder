@@ -9,11 +9,11 @@ https://amyamrani.github.io/holiday-finder/
 
 Search:
 
-![search] (screenshots/search.png)
+![search](screenshots/search.png)
 
 Results:
 
-![results] (screenshots/results.png)
+![results](screenshots/results.png)
 
 ## Technologies Used
 - HTML
