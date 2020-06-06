@@ -9,16 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>It's a holiday somewhere!</h1>
+        <h1>Find Holidays in a Country!</h1>
 
         <form class="js-form">
 
-            <div class="form-header">Search for a holiday:</div>
-
             <div class="form-group">
+                <label for="js-search-country" class="form-label">First, choose a country*</label>
                 <div class="dropdown">
                     <select name="country" id="js-search-country" required="required">
-                        <option value="" selected="selected">Select a Country (required)</option>
+                        <option value="" selected="selected" label=" "></option>
                         <option value="AF">Afghanistan</option>
                         <option value="AL">Albania</option>
                         <option value="DZ">Algeria</option>
@@ -150,9 +149,21 @@
                     </div>
                 </div>
 
+                <label for="js-search-year" class="form-label">Next, select a year*</label>
+                <div class="dropdown">
+                    <select name="year" id="js-search-year" required="required">
+                        <option value="" selected="selected" label=" "></option>
+                    </select>
+
+                    <div class="dropdown-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <label for="js-search-month" class="form-label">Limit holidays by month (optional)</label>
                 <div class="dropdown">
                     <select name="month" id="js-search-month">
-                        <option value="" selected="selected">Month</option>
+                        <option value="" selected="selected" label=" "></option>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -172,9 +183,10 @@
                     </div>
                 </div>
 
+                <label for="js-search-day" class="form-label">Limit holidays by day (optional)</label>
                 <div class="dropdown">
                     <select name="day" id="js-search-day">
-                        <option value="" selected="selected">Day</option>
+                        <option value="" selected="selected" label=" "></option>
                         <option value="01">1</option>
                         <option value="02">2</option>
                         <option value="03">3</option>
@@ -207,17 +219,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-
-                    <div class="dropdown-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <select name="year" id="js-search-year" required="required">
-                        <option value="" selected="selected">Year (required)</option>
-                    </select>
-
+                    
                     <div class="dropdown-icon">
                         <i class="fas fa-chevron-down"></i>
                     </div>

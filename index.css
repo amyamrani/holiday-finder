@@ -15,28 +15,35 @@ body {
 h1 {
     text-align: center;
     color: rgb(56, 178, 172);
+    font-size: 24px;
 }
 
 .form-group {
     margin-top: 10px;
 }
 
-.form-header {
-    font-size: 18px;
+.form-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
     color: #4A5568;
 }
 
 .js-form {
     max-width: 400px;
     background-color: white;
-    padding: 30px;
+    padding: 20px 30px;
+    padding-top: 40px;
     margin: 0 auto;
     border: 2px solid #EDF2F7;
 }
 
 select {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 14px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -112,6 +119,7 @@ button {
     color: #C53030;
     font-weight: bold;
     margin-top: 20px;
+    text-align: center;
 }
 
 #js-loading-message {
@@ -127,4 +135,20 @@ button {
   
 .hidden {
     display: none;
- }
+}
+
+@media screen and (min-width:480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    #js-error-message {
+        text-align: left;
+    }    
+}    
+  
+@media screen and (min-width:800px) {
+    h1 {
+        font-size: 32px;
+    }
+}
