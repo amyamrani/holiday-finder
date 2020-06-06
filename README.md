@@ -1,4 +1,4 @@
-# Holiday Finder - Find Holidays in a Country!
+# Find Holidays in a Country!
 
 Provides users with a list of holidays in a specific country for a given date or year using the Calendarific API.
 
